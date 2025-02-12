@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1 id="welcome-heading">Welcome to the journal</h1>
+            <p id="welcome-description">Here I will record all my achievements and tasks in IT. My digital diary!</p>
+        </div>
+
+        <!-- Options Section -->
+        <div class="options">
+            <a href="/add">Add a new entry</a>
+            <a href="/journal">View journal entries</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for changing language (for both title and description)
+        document.getElementById('welcome-heading').onclick = function() {
+            var title = document.getElementById('welcome-heading');
+            var description = document.getElementById('welcome-description');
+            var currentText = title.innerText;
+
+            if (currentText === "Welcome to the journal") {
+                title.innerText = "Добро пожаловать в журнал";
+                description.innerText = "Здесь я буду записывать все свои достижения и повседневные задачи в IT.";
+            } else {
+                title.innerText = "Welcome to the journal";
+                description.innerText = "Here I will record all my achievements and tasks in IT. My digital diary!";
+            }
+        }
+    </script>
+
+</body>
+</html>

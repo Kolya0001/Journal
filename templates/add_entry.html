@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Entry</title>
+</head>
+<body>
+    <h1>Add a New Journal Entry</h1>
+    <form action="/add" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" required></textarea><br>
+        <button type="submit">Save Entry</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

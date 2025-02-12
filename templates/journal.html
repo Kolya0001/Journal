@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entries</title>
+</head>
+<body>
+    <h1>Journal Entries</h1>
+    <ul>
+        {% for entry in entries %}
+            <li>
+                <h3>{{ entry[1] }}</h3>
+                <p>{{ entry[2] }}</p>
+                <small>Created at: {{ entry[3] }}</small>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
