@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal Entries</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <h1>Journal Entries</h1>
     <ul>
         {% for entry in entries %}
             <li>
-                <h3>{{ entry[1] }}</h3>
-                <p>{{ entry[2] }}</p>
-                <small>Created at: {{ entry[3] }}</small>
+                <strong>{{ entry[1] }}</strong> - {{ entry[2] }} <br>
+                <a href="/edit/{{ entry[0] }}">Edit</a> <!-- Ссылка на редактирование -->
             </li>
         {% endfor %}
     </ul>
-    <a href="/">Back to Home</a>
+    <a href="/add">Add New Entry</a>
 </body>
 </html>

@@ -1,0 +1,318 @@
+/* Подключение шрифта Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* Общие стили */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #4CAF50;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Поля ввода */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s, background 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    background: #f0fff0;
+    outline: none;
+}
+
+/* Кнопки */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme .container {
+    background: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme h1, 
+.dark-theme h2 {
+    color: #bb86fc;
+}
+
+.dark-theme input, 
+.dark-theme textarea {
+    background: #2c2c2c;
+    color: white;
+    border: 2px solid #555;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+    color: #888;
+}
+
+/* Кнопка переключения темы */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+/* Кнопка "Назад домой" */
+.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-home:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Стили для записей журнала */
+.entry {
+    padding: 15px;
+    margin: 15px 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.dark-theme .entry {
+    background: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.entry h3 {
+    margin: 0;
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.dark-theme .entry h3 {
+    color: #bb86fc;
+}
+/* --- Темная тема --- */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* --- Анимация переключения --- */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Кнопка темной темы --- */
+#theme-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #666;
+}
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+
+/* Заголовок */
+h1 {
+    color: #4caf50 !important;
+    font-size: 24px !important;
+    margin: 20px auto !important;
+    padding: 10px 0 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.dark-mode h1 {
+    color: #b388ff !important;
+    border: 2px solid #4caf50 !important;
+    padding: 10px !important;
+    display: inline-block !important;
+}
+
+/* Контейнер заголовка убираем */
+.welcome-section {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 20px auto !important;
+    max-width: 80% !important;
+}
+
+/* Текст описания */
+.description {
+    font-size: 16px !important;
+    color: #555 !important;
+    margin-top: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dark-mode .description {
+    color: #d0d0d0 !important; /* Теперь не будет сливаться */
+}
+
+/* Кнопки */
+.options {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+}
+
+.options a {
+    text-decoration: none !important;
+    padding: 12px 20px !important;
+    border: 2px solid #4caf50 !important;
+    border-radius: 8px !important;
+    color: #4caf50 !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+}
+
+.options a:hover {
+    background: #4caf50 !important;
+    color: white !important;
+    transform: scale(1.05) !important;
+}
+
+.dark-mode .options a {
+    border: 2px solid #b388ff !important;
+    color: #b388ff !important;
+}
+
+.dark-mode .options a:hover {
+    background: #b388ff !important;
+    color: black !important;
+}
+
+/* Кнопка смены темы */
+#theme-toggle {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    padding: 10px !important;
+    border: none !important;
+    border-radius: 50% !important;
+    background: #4caf50 !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+#theme-toggle:hover {
+    background: #388e3c !important;
+}
+
+.dark-mode #theme-toggle {
+    background: #b388ff !important;
+    color: black !important;
+}
+
+.dark-mode #theme-toggle:hover {
+    background: #9575cd !important;
+}
+
+

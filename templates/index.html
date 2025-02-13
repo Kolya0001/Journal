@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+<button id="theme-toggle">🌙</button>
 
     <div class="container">
         <!-- Welcome Section -->
@@ -39,5 +39,7 @@
         }
     </script>
 
+    <!-- Подключение скрипта переключения темы -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
